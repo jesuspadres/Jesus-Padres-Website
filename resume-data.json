@@ -1,0 +1,303 @@
+{
+  "personal": {
+    "name": "Jesus Antonio Padres Parada",
+    "shortName": "JESUS PADRES",
+    "initials": "JP",
+    "image": "headshot.jpg",
+    "title": "Software Engineer & Founder",
+    "tagline": "Building digital experiences that scale.",
+    "bio": "Full-stack engineer with 3+ years of experience designing and shipping SaaS applications for enterprise clients. Currently building solutions at Solvr Labs.",
+    "location": "Tucson, Arizona",
+    "languages": ["English", "Spanish"],
+    "phone": "(520) 393-9903",
+    "email": "jesuspadresjobs@gmail.com",
+    "linkedin": "https://linkedin.com/in/jesus-padres",
+    "github": "",
+    "website": "jesuspadres.com"
+  },
+
+  "stats": [
+    { "value": "3+", "label": "Years Experience" },
+    { "value": "95%", "label": "Test Efficiency Gain" }
+  ],
+
+  "experience": [
+    {
+      "id": "solvr",
+      "title": "Founder",
+      "company": "Solvr Labs",
+      "date": "May 2025 — Present",
+      "type": "current",
+      "summary": "Technical consulting practice delivering branding, digital strategy, and custom software solutions.",
+      "highlights": [
+        "Support clients with branding, digital strategy, and technical solutions",
+        "Develop processes and workflows focused on improving customer experience and operational efficiency"
+      ],
+      "details": {
+        "description": "Founded Solvr Labs to help businesses transform their digital presence and streamline operations through custom technology solutions.",
+        "responsibilities": [
+          "Lead client discovery sessions to identify pain points and opportunities",
+          "Design and implement custom web applications and automation tools",
+          "Create brand identities and digital marketing strategies",
+          "Build scalable workflows that improve operational efficiency"
+        ],
+        "technologies": ["React", "Node.js", "Python", "Figma", "AWS"],
+        "achievements": [
+          "Successfully launched consulting practice",
+          "Developed reusable frameworks for rapid client delivery"
+        ]
+      }
+    },
+    {
+      "id": "qualtrics",
+      "title": "Software Engineer",
+      "company": "Qualtrics",
+      "date": "July 2022 — April 2025",
+      "type": "full-time",
+      "summary": "Full-stack development of SaaS applications for enterprise and university clients.",
+      "highlights": [
+        "Designed, developed, and tested SaaS applications for enterprise and university clients, focusing on reliability and scalability",
+        "Wrote and maintained clean, modular code in Java, Python, JavaScript, and SQL for full-stack delivery",
+        "Built automated test suites with Selenium and JUnit, improving test efficiency by 95%",
+        "Collaborated cross-functionally with PMs, QA, and DevOps teams for seamless CI/CD via Jenkins",
+        "Monitored and debugged production issues using centralized logs, maintaining system uptime"
+      ],
+      "details": {
+        "description": "Worked on Qualtrics' experience management platform, building tools that help organizations collect and analyze feedback at scale.",
+        "responsibilities": [
+          "Develop new features for survey creation and distribution platform",
+          "Maintain and optimize existing codebase for performance",
+          "Write comprehensive unit and integration tests",
+          "Participate in on-call rotation for production support",
+          "Conduct code reviews and mentor junior developers"
+        ],
+        "technologies": ["Java", "Python", "JavaScript", "SQL", "React", "Jenkins", "Selenium", "JUnit", "AWS"],
+        "achievements": [
+          "Improved test automation efficiency by 95%",
+          "Reduced production incidents through proactive monitoring",
+          "Contributed to platform serving millions of survey responses"
+        ]
+      }
+    },
+    {
+      "id": "uarizona",
+      "title": "Computer Science Tutor",
+      "company": "University of Arizona",
+      "date": "Aug 2021 — May 2022",
+      "type": "part-time",
+      "summary": "Mentored students in core CS fundamentals and software engineering practices.",
+      "highlights": [
+        "Mentored students in data structures, algorithms, and software engineering fundamentals using Java, Python, and C",
+        "Guided learners in debugging and testing strategies to strengthen independent problem-solving skills"
+      ],
+      "details": {
+        "description": "Provided one-on-one and group tutoring for computer science students, helping them master fundamental concepts and develop strong problem-solving skills.",
+        "responsibilities": [
+          "Conduct tutoring sessions for data structures and algorithms courses",
+          "Help students debug code and understand error messages",
+          "Explain complex concepts using real-world analogies",
+          "Create practice problems and study materials"
+        ],
+        "technologies": ["Java", "Python", "C", "Git"],
+        "achievements": [
+          "Helped dozens of students improve their grades",
+          "Developed teaching materials still used by tutoring center",
+          "Received consistently positive feedback from students"
+        ]
+      }
+    }
+  ],
+
+  "skills": [
+    {
+      "id": "languages",
+      "name": "Languages",
+      "proficiency": 95,
+      "tags": ["Java", "Python", "JavaScript", "SQL", "C", "Swift"],
+      "details": {
+        "description": "Strong foundation in multiple programming paradigms with production experience.",
+        "breakdown": [
+          { "name": "Java", "level": "Expert", "years": 4 },
+          { "name": "Python", "level": "Expert", "years": 4 },
+          { "name": "JavaScript", "level": "Advanced", "years": 3 },
+          { "name": "SQL", "level": "Advanced", "years": 3 },
+          { "name": "C", "level": "Intermediate", "years": 2 },
+          { "name": "Swift", "level": "Intermediate", "years": 1 }
+        ]
+      }
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "proficiency": 88,
+      "tags": ["React", "HTML5", "CSS", "DOM fundamentals", "responsive design"],
+      "details": {
+        "description": "Building modern, accessible, and performant user interfaces.",
+        "breakdown": [
+          { "name": "React", "level": "Advanced", "years": 3 },
+          { "name": "HTML5/CSS3", "level": "Expert", "years": 4 },
+          { "name": "Responsive Design", "level": "Advanced", "years": 3 },
+          { "name": "DOM/Browser APIs", "level": "Advanced", "years": 3 }
+        ]
+      }
+    },
+    {
+      "id": "tools",
+      "name": "Tools & Infra",
+      "proficiency": 90,
+      "tags": ["Git/GitHub", "Jenkins", "Linux", "CI/CD pipelines", "VS Code"],
+      "details": {
+        "description": "DevOps and infrastructure tooling for reliable software delivery.",
+        "breakdown": [
+          { "name": "Git/GitHub", "level": "Expert", "years": 4 },
+          { "name": "Jenkins", "level": "Advanced", "years": 3 },
+          { "name": "Linux", "level": "Advanced", "years": 4 },
+          { "name": "CI/CD", "level": "Advanced", "years": 3 }
+        ]
+      }
+    },
+    {
+      "id": "testing",
+      "name": "Testing & Debug",
+      "proficiency": 92,
+      "tags": ["Unit testing", "Selenium", "e2e testing", "distributed systems debugging"],
+      "details": {
+        "description": "Comprehensive testing strategies and debugging complex systems.",
+        "breakdown": [
+          { "name": "Unit Testing", "level": "Expert", "years": 3 },
+          { "name": "Selenium", "level": "Expert", "years": 3 },
+          { "name": "E2E Testing", "level": "Advanced", "years": 3 },
+          { "name": "Debugging", "level": "Expert", "years": 4 }
+        ]
+      }
+    },
+    {
+      "id": "workflow",
+      "name": "Workflow",
+      "proficiency": 85,
+      "tags": ["Agile/Scrum", "Jira Certified", "code reviews", "documentation"],
+      "details": {
+        "description": "Collaborative development practices and project management.",
+        "breakdown": [
+          { "name": "Agile/Scrum", "level": "Advanced", "years": 3 },
+          { "name": "Jira", "level": "Certified", "years": 3 },
+          { "name": "Code Reviews", "level": "Advanced", "years": 3 },
+          { "name": "Documentation", "level": "Advanced", "years": 4 }
+        ]
+      }
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "proficiency": 95,
+      "tags": ["Bilingual EN/ES", "mentoring", "cross-functional collaboration"],
+      "details": {
+        "description": "Strong interpersonal skills with experience in mentoring and team collaboration.",
+        "breakdown": [
+          { "name": "English", "level": "Native", "years": null },
+          { "name": "Spanish", "level": "Native", "years": null },
+          { "name": "Mentoring", "level": "Advanced", "years": 3 },
+          { "name": "Collaboration", "level": "Expert", "years": 4 }
+        ]
+      }
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "survey-platform",
+      "title": "Enterprise Survey Platform",
+      "tag": "SaaS",
+      "summary": "Full-stack development of survey and experience management tools serving enterprise and university clients at scale.",
+      "technologies": ["Java", "Python", "JavaScript", "SQL"],
+      "details": {
+        "description": "Contributed to Qualtrics' flagship experience management platform, building features that help organizations collect, analyze, and act on feedback data.",
+        "features": [
+          "Survey builder with advanced logic and branching",
+          "Real-time response collection and analytics",
+          "Integration with enterprise systems (Salesforce, SAP)",
+          "Role-based access control and permissions"
+        ],
+        "impact": "Platform serves millions of survey responses annually for Fortune 500 companies and universities worldwide.",
+        "role": "Full-stack developer responsible for feature development, testing, and production support."
+      },
+      "link": ""
+    },
+    {
+      "id": "test-automation",
+      "title": "Test Automation Framework",
+      "tag": "Automation",
+      "summary": "Built comprehensive automated test suites achieving 95% efficiency improvement in QA processes.",
+      "technologies": ["Selenium", "JUnit", "Jenkins"],
+      "details": {
+        "description": "Designed and implemented a comprehensive test automation framework that dramatically improved QA efficiency and release confidence.",
+        "features": [
+          "Page Object Model architecture for maintainability",
+          "Data-driven testing with external configuration",
+          "Parallel test execution for faster feedback",
+          "Integration with CI/CD pipeline"
+        ],
+        "impact": "Reduced manual testing time by 95%, enabling faster release cycles and higher confidence in deployments.",
+        "role": "Lead developer responsible for architecture, implementation, and team training."
+      },
+      "link": ""
+    },
+    {
+      "id": "solvr-labs",
+      "title": "Solvr Labs",
+      "tag": "Consulting",
+      "summary": "Founded technical consulting practice delivering branding, digital strategy, and custom software solutions.",
+      "technologies": ["Strategy", "Development", "UX"],
+      "details": {
+        "description": "Founded a consulting practice focused on helping businesses leverage technology to improve their operations and customer experience.",
+        "features": [
+          "Custom web application development",
+          "Brand identity and digital strategy",
+          "Process automation and optimization",
+          "Technical consulting and architecture"
+        ],
+        "impact": "Helping businesses transform their digital presence and streamline operations.",
+        "role": "Founder and lead consultant."
+      },
+      "link": ""
+    },
+    {
+      "id": "cs-curriculum",
+      "title": "CS Curriculum Support",
+      "tag": "Education",
+      "summary": "Developed teaching materials and mentoring programs for data structures and algorithms courses.",
+      "technologies": ["Java", "Python", "C"],
+      "details": {
+        "description": "Created educational resources and mentoring programs to help computer science students master fundamental concepts.",
+        "features": [
+          "Practice problem sets with detailed solutions",
+          "Visual explanations of complex algorithms",
+          "Debugging workshops and office hours",
+          "Study guides for exam preparation"
+        ],
+        "impact": "Helped dozens of students improve their understanding and grades in core CS courses.",
+        "role": "Lead tutor and curriculum contributor."
+      },
+      "link": ""
+    }
+  ],
+
+  "education": {
+    "school": "University of Arizona",
+    "location": "Tucson, Arizona",
+    "degree": "Bachelor of Science in Computer Science",
+    "gpa": "3.7",
+    "certifications": ["Project Management Certification"],
+    "coursework": [
+      "Data Structures & Algorithms",
+      "Software Engineering",
+      "Database Systems",
+      "Operating Systems",
+      "Computer Networks"
+    ],
+    "activities": [
+      "Computer Science Tutor",
+      "Coding Club Member"
+    ]
+  }
+}
