@@ -6,9 +6,9 @@
     "image": "headshot.jpg",
     "title": "Software Engineer & Founder",
     "tagline": "Building digital experiences that scale.",
-    "bio": "Full-stack engineer with 3+ years of experience designing and shipping SaaS applications for enterprise clients. Currently building solutions at Solvr Labs.",
+    "bio": "Software engineer with 3+ years of experience designing and shipping SaaS applications for enterprise clients. Currently building solutions at Solvr Labs.",
     "location": "Tucson, Arizona",
-    "languages": ["English", "Spanish"],
+    "languages": ["English", "Español"],
     "phone": "(520) 393-9903",
     "email": "jesuspadresjobs@gmail.com",
     "linkedin": "https://linkedin.com/in/jesus-padres",
@@ -57,7 +57,7 @@
       "summary": "Full-stack development of SaaS applications for enterprise and university clients.",
       "highlights": [
         "Designed, developed, and tested SaaS applications for enterprise and university clients, focusing on reliability and scalability",
-        "Wrote and maintained clean, modular code in Java, Python, JavaScript, and SQL for full-stack delivery",
+        "Wrote and maintained clean, modular code in Python, JavaScript, and SQL for full-stack delivery",
         "Built automated test suites with Selenium and JUnit, improving test efficiency by 95%",
         "Collaborated cross-functionally with PMs, QA, and DevOps teams for seamless CI/CD via Jenkins",
         "Monitored and debugged production issues using centralized logs, maintaining system uptime"
@@ -93,7 +93,7 @@
       "details": {
         "description": "Provided one-on-one and group tutoring for computer science students, helping them master fundamental concepts and develop strong problem-solving skills.",
         "responsibilities": [
-          "Conduct tutoring sessions for data structures and algorithms courses",
+          "Conduct tutoring sessions for all computer science courses",
           "Help students debug code and understand error messages",
           "Explain complex concepts using real-world analogies",
           "Create practice problems and study materials"
@@ -117,12 +117,12 @@
       "details": {
         "description": "Strong foundation in multiple programming paradigms with production experience.",
         "breakdown": [
-          { "name": "Java", "level": "Expert", "years": 4 },
-          { "name": "Python", "level": "Expert", "years": 4 },
-          { "name": "JavaScript", "level": "Advanced", "years": 3 },
-          { "name": "SQL", "level": "Advanced", "years": 3 },
-          { "name": "C", "level": "Intermediate", "years": 2 },
-          { "name": "Swift", "level": "Intermediate", "years": 1 }
+          { "name": "Java", "level": "Advanced", "years": 4 },
+          { "name": "Python", "level": "Advanced", "years": 4 },
+          { "name": "JavaScript", "level": "Capable", "years": 2 },
+          { "name": "SQL", "level": "Capable", "years": 2 },
+          { "name": "C", "level": "Capable", "years": 2 },
+          { "name": "Swift", "level": "Capable", "years": 1 }
         ]
       }
     },
@@ -134,10 +134,10 @@
       "details": {
         "description": "Building modern, accessible, and performant user interfaces.",
         "breakdown": [
-          { "name": "React", "level": "Advanced", "years": 3 },
-          { "name": "HTML5/CSS3", "level": "Expert", "years": 4 },
-          { "name": "Responsive Design", "level": "Advanced", "years": 3 },
-          { "name": "DOM/Browser APIs", "level": "Advanced", "years": 3 }
+          { "name": "React", "level": "Capable", "years": 1 },
+          { "name": "HTML5/CSS3", "level": "Competent", "years": 3 },
+          { "name": "Responsive Design", "level": "Capable", "years": 1 },
+          { "name": "DOM/Browser APIs", "level": "Capable", "years": 1 }
         ]
       }
     },
@@ -149,10 +149,10 @@
       "details": {
         "description": "DevOps and infrastructure tooling for reliable software delivery.",
         "breakdown": [
-          { "name": "Git/GitHub", "level": "Expert", "years": 4 },
-          { "name": "Jenkins", "level": "Advanced", "years": 3 },
-          { "name": "Linux", "level": "Advanced", "years": 4 },
-          { "name": "CI/CD", "level": "Advanced", "years": 3 }
+          { "name": "Git/GitHub", "level": "Advanced", "years": 3 },
+          { "name": "Jenkins", "level": "Advanced", "years": 2 },
+          { "name": "Linux", "level": "Advanced", "years": 3 },
+          { "name": "CI/CD", "level": "Advanced", "years": 2 }
         ]
       }
     },
@@ -164,10 +164,10 @@
       "details": {
         "description": "Comprehensive testing strategies and debugging complex systems.",
         "breakdown": [
-          { "name": "Unit Testing", "level": "Expert", "years": 3 },
-          { "name": "Selenium", "level": "Expert", "years": 3 },
+          { "name": "Unit Testing", "level": "Advanced", "years": 3 },
+          { "name": "Selenium", "level": "Advanced", "years": 3 },
           { "name": "E2E Testing", "level": "Advanced", "years": 3 },
-          { "name": "Debugging", "level": "Expert", "years": 4 }
+          { "name": "Debugging", "level": "Advanced", "years": 4 }
         ]
       }
     },
@@ -208,7 +208,7 @@
       "id": "survey-platform",
       "title": "Enterprise Survey Platform",
       "tag": "SaaS",
-      "summary": "Full-stack development of survey and experience management tools serving enterprise and university clients at scale.",
+      "summary": "Managed quality of survey and experience management tools serving enterprise and university clients at scale.",
       "technologies": ["Java", "Python", "JavaScript", "SQL"],
       "details": {
         "description": "Contributed to Qualtrics' flagship experience management platform, building features that help organizations collect, analyze, and act on feedback data.",
@@ -219,7 +219,7 @@
           "Role-based access control and permissions"
         ],
         "impact": "Platform serves millions of survey responses annually for Fortune 500 companies and universities worldwide.",
-        "role": "Full-stack developer responsible for feature development, testing, and production support."
+        "role": "Responsible for feature development, testing, and production support."
       },
       "link": ""
     },
@@ -289,15 +289,14 @@
     "gpa": "3.7",
     "certifications": ["Project Management Certification"],
     "coursework": [
-      "Data Structures & Algorithms",
-      "Software Engineering",
+      "Data Structures",
+      "Software Development",
       "Database Systems",
       "Operating Systems",
-      "Computer Networks"
+      "Algorithms"
     ],
     "activities": [
-      "Computer Science Tutor",
-      "Coding Club Member"
+      "Computer Science Tutor"
     ]
   }
 }
