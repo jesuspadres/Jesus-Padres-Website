@@ -205,25 +205,6 @@
 
   "projects": [
     {
-      "id": "survey-platform",
-      "title": "Enterprise Survey Platform",
-      "tag": "SaaS",
-      "summary": "Managed quality of survey and experience management tools serving enterprise and university clients at scale.",
-      "technologies": ["Java", "Python", "JavaScript", "SQL"],
-      "details": {
-        "description": "Contributed to Qualtrics' flagship experience management platform, building features that help organizations collect, analyze, and act on feedback data.",
-        "features": [
-          "Survey builder with advanced logic and branching",
-          "Real-time response collection and analytics",
-          "Integration with enterprise systems (Salesforce, SAP)",
-          "Role-based access control and permissions"
-        ],
-        "impact": "Platform serves millions of survey responses annually for Fortune 500 companies and universities worldwide.",
-        "role": "Responsible for feature development, testing, and production support."
-      },
-      "link": ""
-    },
-    {
       "id": "test-automation",
       "title": "Test Automation Framework",
       "tag": "Automation",
@@ -243,6 +224,46 @@
       "link": ""
     },
     {
+      "id": "taskline",
+      "title": "TaskLine",
+      "tag": "Full-Stack",
+      "summary": "Client portal for freelancers with task requests, instant quoting, and one-click approvals.",
+      "technologies": ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS"],
+      "details": {
+        "description": "A professional client portal that centralizes client communication, task requests, pricing approvals, and project progress for freelancers.",
+        "features": [
+          "Task request to approval workflow with instant quoting",
+          "Magic link authentication for passwordless client login",
+          "Project timeline with upcoming and completed tasks",
+          "In-app messaging and file sharing per project",
+          "Custom branding options for Pro tier"
+        ],
+        "impact": "Streamlines freelancer-client communication, eliminating lost requests in email and reducing approval friction.",
+        "role": "Sole developer — designed architecture, built full-stack application, and deployed to production."
+      },
+      "link": "https://taskline.solvrlabs.com"
+    },
+    {
+      "id": "mealmaster",
+      "title": "MealMaster",
+      "tag": "Full-Stack",
+      "summary": "Meal planning and recipe discovery app with weekly calendar, saved recipes, and smart search.",
+      "technologies": ["React", "TypeScript", "FastAPI", "Python", "SQLAlchemy"],
+      "details": {
+        "description": "A modern meal planning application featuring recipe search via Spoonacular API, personal recipe collections, and weekly meal planning with a brutalist design aesthetic.",
+        "features": [
+          "Smart recipe search with detailed nutrition and cooking info",
+          "JWT-based authentication with secure password hashing",
+          "Personal recipe collection with favorites",
+          "Weekly meal planner with drag-and-drop scheduling",
+          "Brutalist UI with bold borders and monospace typography"
+        ],
+        "impact": "Demonstrates full-stack proficiency with React frontend, FastAPI backend, and third-party API integration.",
+        "role": "Sole developer — built 12-week project covering frontend, backend, database design, and API integration."
+      },
+      "link": "https://github.com/jesuspadres/mealmaster"
+    },
+    {
       "id": "solvr-labs",
       "title": "Solvr Labs",
       "tag": "Consulting",
@@ -259,26 +280,7 @@
         "impact": "Helping businesses transform their digital presence and streamline operations.",
         "role": "Founder and lead consultant."
       },
-      "link": ""
-    },
-    {
-      "id": "cs-curriculum",
-      "title": "CS Curriculum Support",
-      "tag": "Education",
-      "summary": "Developed teaching materials and mentoring programs for data structures and algorithms courses.",
-      "technologies": ["Java", "Python", "C"],
-      "details": {
-        "description": "Created educational resources and mentoring programs to help computer science students master fundamental concepts.",
-        "features": [
-          "Practice problem sets with detailed solutions",
-          "Visual explanations of complex algorithms",
-          "Debugging workshops and office hours",
-          "Study guides for exam preparation"
-        ],
-        "impact": "Helped dozens of students improve their understanding and grades in core CS courses.",
-        "role": "Lead tutor and curriculum contributor."
-      },
-      "link": ""
+      "link": "https://solvrlabs.com"
     }
   ],
 
