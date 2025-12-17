@@ -56,6 +56,11 @@ function renderApp() {
 
   // Initialize animations
   initAnimations();
+  
+  // Initialize liquid glass effects after render
+  if (typeof initLiquidGlass === 'function') {
+    setTimeout(initLiquidGlass, 100);
+  }
 }
 
 function renderHero() {

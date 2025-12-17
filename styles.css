@@ -10,6 +10,12 @@
   --mono: 'Space Mono', monospace;
   --display: 'Syne', sans-serif;
   --max-width: 1400px;
+  
+  /* Glass effect variables */
+  --glass-blur: 20px;
+  --glass-saturation: 180%;
+  --glass-opacity: 0.12;
+  --glass-border: rgba(255, 255, 255, 0.15);
 }
 
 /* Content container */
@@ -46,7 +52,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-/* Grid overlay */
+/* Grid overlay with glass-like pattern */
 body::before {
   content: '';
   position: fixed;
@@ -56,21 +62,58 @@ body::before {
   height: 100%;
   pointer-events: none;
   background-image: 
-    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: 1;
 }
 
-/* Navigation */
+/* Ambient glow background */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: 
+    radial-gradient(ellipse 80% 50% at 20% 20%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(255, 51, 102, 0.03) 0%, transparent 50%);
+  z-index: 0;
+}
+
+/* Navigation - Glass Effect */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.85) 0%,
+    rgba(10, 10, 10, 0.7) 100%
+  );
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+nav::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 136, 0.3),
+    transparent
+  );
 }
 
 .nav-inner {
@@ -99,6 +142,7 @@ nav {
   height: 12px;
   background: var(--accent);
   animation: blink 1s step-end infinite;
+  box-shadow: 0 0 10px var(--accent);
 }
 
 @keyframes blink {
@@ -119,12 +163,32 @@ nav {
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .nav-links a:hover {
   color: var(--accent);
-  border-color: var(--accent);
+  border-color: rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.nav-links a:hover::before {
+  opacity: 1;
 }
 
 /* Hero Section */
@@ -165,6 +229,7 @@ nav {
   width: 40px;
   height: 1px;
   background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
 }
 
 .hero h1 {
@@ -182,6 +247,7 @@ nav {
   padding: 0 0.2em;
   display: inline-block;
   transform: skewX(-3deg);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
 }
 
 .hero-intro {
@@ -198,16 +264,56 @@ nav {
   margin-bottom: 3rem;
 }
 
+/* Glass Stats */
 .stat {
   position: relative;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1.25rem;
   margin: -1rem;
-  transition: all 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.stat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .stat:hover {
-  background: var(--surface);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  border-color: var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.stat:hover::before {
+  opacity: 1;
 }
 
 .stat-value {
@@ -216,6 +322,7 @@ nav {
   font-weight: 800;
   color: var(--accent);
   line-height: 1;
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
 }
 
 .stat-label {
@@ -256,6 +363,7 @@ nav {
   inset: 20px;
   border-color: var(--accent);
   transform: rotate(3deg);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.1);
 }
 
 .shape-layer-3 {
@@ -297,20 +405,50 @@ nav {
   transform: rotate(2deg) translate(-5px, 5px);
 }
 
+/* Floating Badges - Glass Effect */
 .floating-badge {
   position: absolute;
-  background: var(--bg);
-  border: 2px solid var(--accent);
   padding: 1rem 1.25rem;
   font-size: 0.7rem;
   letter-spacing: 0.05em;
   animation: floatBadge 4s ease-in-out infinite;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
+  
+  /* Glass effect */
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.9) 0%,
+    rgba(10, 10, 10, 0.7) 100%
+  );
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.floating-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
 }
 
 .floating-badge:hover {
-  transform: scale(1.05);
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 
+    0 15px 40px rgba(0, 255, 136, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .floating-badge.badge-1 {
@@ -322,7 +460,13 @@ nav {
   bottom: 15%;
   left: 0;
   animation-delay: 2s;
-  border-color: var(--accent-alt);
+  border-color: rgba(255, 51, 102, 0.3);
+}
+
+.floating-badge.badge-2:hover {
+  box-shadow: 
+    0 15px 40px rgba(255, 51, 102, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .floating-badge span {
@@ -331,10 +475,12 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent);
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
 }
 
 .floating-badge.badge-2 span {
   color: var(--accent-alt);
+  text-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
 }
 
 @keyframes floatBadge {
@@ -342,7 +488,7 @@ nav {
   50% { transform: translateY(-10px); }
 }
 
-/* CTA Buttons */
+/* CTA Buttons - Glass Effect */
 .cta-group {
   display: flex;
   gap: 1rem;
@@ -358,30 +504,78 @@ nav {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid;
-  transition: all 0.2s ease;
+  border: 1px solid;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.cta-btn:hover::before {
+  left: 100%;
 }
 
 .cta-btn.primary {
-  background: var(--accent);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.9) 0%,
+    rgba(0, 255, 136, 0.7) 100%
+  );
   border-color: var(--accent);
   color: var(--bg);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 
 .cta-btn.primary:hover {
-  background: transparent;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.2) 0%,
+    rgba(0, 255, 136, 0.1) 100%
+  );
   color: var(--accent);
+  box-shadow: 
+    0 10px 40px rgba(0, 255, 136, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .cta-btn.secondary {
-  background: transparent;
-  border-color: var(--border);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: var(--glass-border);
   color: var(--text);
 }
 
 .cta-btn.secondary:hover {
   border-color: var(--text);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Section Styles */
@@ -428,7 +622,7 @@ section {
   margin-top: 0.5rem;
 }
 
-/* Experience Section */
+/* Experience Section - Glass Items */
 .experience-grid {
   display: grid;
   gap: 0;
@@ -438,23 +632,42 @@ section {
   display: grid;
   grid-template-columns: 200px 1fr auto;
   border-bottom: 1px solid var(--border);
-  padding: 2rem 0;
+  padding: 2rem 1rem;
+  margin: 0 -1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  background: transparent;
+}
+
+.exp-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .exp-item::after {
   content: 'CLICK FOR DETAILS →';
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.6rem;
   letter-spacing: 0.1em;
-  color: var(--text-muted);
+  color: var(--accent);
   opacity: 0;
   transition: opacity 0.2s ease;
+}
+
+.exp-item:hover::before {
+  opacity: 1;
 }
 
 .exp-item:hover::after {
@@ -462,11 +675,12 @@ section {
 }
 
 .exp-item:hover {
-  background: var(--surface);
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: var(--glass-border);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .exp-item:first-child {
@@ -479,6 +693,13 @@ section {
   text-transform: uppercase;
   color: var(--text-muted);
   padding-top: 0.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.exp-content {
+  position: relative;
+  z-index: 1;
 }
 
 .exp-content h3 {
@@ -516,11 +737,18 @@ section {
   color: var(--text-muted);
   height: fit-content;
   margin-top: 0.25rem;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-/* Skills Section */
+/* Skills Section - Glass Blocks */
 #skills {
-  background: var(--surface);
+  background: linear-gradient(
+    180deg,
+    var(--surface) 0%,
+    rgba(20, 20, 20, 0.8) 100%
+  );
 }
 
 .skills-container {
@@ -531,14 +759,19 @@ section {
 }
 
 .skill-block {
-  background: var(--bg);
+  background: linear-gradient(
+    145deg,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.8) 100%
+  );
   padding: 2rem;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Glass highlight on skill block */
 .skill-block::before {
   content: attr(data-index);
   position: absolute;
@@ -549,19 +782,56 @@ section {
   font-weight: 800;
   color: var(--surface);
   line-height: 1;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.skill-block::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 136, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .skill-block:hover {
-  background: var(--surface-hover);
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 0.95) 0%,
+    rgba(15, 15, 15, 0.9) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 255, 136, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .skill-block:hover::before {
-  color: var(--border);
+  color: rgba(0, 255, 136, 0.2);
+}
+
+.skill-block:hover::after {
+  opacity: 1;
 }
 
 .skill-block:hover .skill-bar-fill {
-  background: var(--accent);
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    rgba(0, 255, 136, 0.7)
+  );
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 .skill-name {
@@ -580,16 +850,39 @@ section {
 
 .skill-bar {
   height: 4px;
-  background: var(--border);
+  background: rgba(255, 255, 255, 0.1);
   position: relative;
   margin-bottom: 1rem;
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 .skill-bar-fill {
   height: 100%;
   background: var(--text-muted);
-  transition: all 0.8s ease, background 0.3s ease;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
   width: 0;
+  border-radius: 2px;
+  position: relative;
+}
+
+.skill-bar-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-block:hover .skill-bar-fill::after {
+  opacity: 1;
+  box-shadow: 0 0 10px var(--accent);
 }
 
 .skill-expand {
@@ -604,7 +897,7 @@ section {
   opacity: 1;
 }
 
-/* Projects Section */
+/* Projects Section - Glass Cards */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -613,15 +906,21 @@ section {
 }
 
 .project-card {
-  background: var(--bg);
+  background: linear-gradient(
+    145deg,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.85) 100%
+  );
   padding: 2.5rem;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
+/* Glass highlight */
 .project-card::before {
   content: '';
   position: absolute;
@@ -629,16 +928,52 @@ section {
   left: 0;
   width: 4px;
   height: 0;
-  background: var(--accent);
-  transition: height 0.3s ease;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    rgba(0, 255, 136, 0.3)
+  );
+  transition: height 0.4s ease;
+}
+
+/* Glass shimmer */
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.03),
+    transparent
+  );
+  transition: left 0.8s ease;
 }
 
 .project-card:hover::before {
   height: 100%;
 }
 
+.project-card:hover::after {
+  left: 200%;
+}
+
 .project-card:hover {
-  background: var(--surface);
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 0.95) 0%,
+    rgba(15, 15, 15, 0.9) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 255, 136, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .project-tag {
@@ -651,6 +986,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   width: fit-content;
+  background: rgba(0, 255, 136, 0.05);
 }
 
 .project-title {
@@ -677,9 +1013,16 @@ section {
 
 .tech-tag {
   padding: 0.25rem 0.5rem;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.65rem;
   color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .tech-tag {
+  border-color: rgba(0, 255, 136, 0.2);
+  background: rgba(0, 255, 136, 0.05);
 }
 
 .project-footer {
@@ -700,12 +1043,14 @@ section {
   font-size: 0.6rem;
   letter-spacing: 0.1em;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  background: rgba(0, 255, 136, 0.05);
 }
 
 .project-link:hover {
   background: var(--accent);
   color: var(--bg);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 .project-link svg {
@@ -725,9 +1070,13 @@ section {
   opacity: 1;
 }
 
-/* Education Section */
+/* Education Section - Glass Card */
 #education {
-  background: var(--surface);
+  background: linear-gradient(
+    180deg,
+    var(--surface) 0%,
+    rgba(20, 20, 20, 0.8) 100%
+  );
 }
 
 .edu-card {
@@ -736,13 +1085,52 @@ section {
   gap: 4rem;
   align-items: start;
   cursor: pointer;
-  padding: 2rem;
+  padding: 2.5rem;
   margin: -2rem;
-  transition: background 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 136, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .edu-card:hover {
-  background: var(--surface-hover);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: var(--glass-border);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.edu-card:hover::before {
+  opacity: 1;
 }
 
 .edu-main h3 {
@@ -784,6 +1172,14 @@ section {
 .edu-stat {
   border-left: 2px solid var(--accent);
   padding-left: 1rem;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 136, 0.05) 0%,
+    transparent 100%
+  );
+  padding: 1rem;
+  padding-left: 1.5rem;
+  margin-left: -0.5rem;
 }
 
 .edu-stat-value {
@@ -791,6 +1187,7 @@ section {
   font-size: 2rem;
   font-weight: 800;
   color: var(--accent);
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 .edu-stat-label {
@@ -800,7 +1197,7 @@ section {
   letter-spacing: 0.1em;
 }
 
-/* Contact Section */
+/* Contact Section - Glass Links */
 #contact {
   text-align: center;
   padding: 8rem 2rem;
@@ -851,18 +1248,53 @@ section {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.5rem;
-  border: 2px solid var(--border);
   text-decoration: none;
   color: var(--text);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  transition: all 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  
+  /* Glass effect */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+.contact-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .contact-link:hover {
   border-color: var(--accent);
   color: var(--accent);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 15px 40px rgba(0, 255, 136, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.contact-link:hover::before {
+  opacity: 1;
 }
 
 .contact-link svg {
@@ -876,9 +1308,18 @@ section {
   gap: 0.75rem;
   margin-top: 3rem;
   padding: 1rem 1.5rem;
-  border: 1px dashed var(--border);
   font-size: 0.75rem;
   color: var(--text-muted);
+  
+  /* Glass effect */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
 }
 
 .lang-badge strong {
@@ -890,6 +1331,11 @@ footer {
   border-top: 1px solid var(--border);
   position: relative;
   z-index: 2;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .footer-inner {
@@ -906,18 +1352,20 @@ footer span {
   color: var(--accent);
 }
 
-/* Modal Styles */
+/* Modal Styles - Glass Effect */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   padding: 2rem;
 }
 
@@ -927,15 +1375,45 @@ footer span {
 }
 
 .modal {
-  background: var(--bg);
-  border: 2px solid var(--border);
   max-width: 700px;
   width: 100%;
   max-height: 80vh;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
-  transform: translateY(20px) scale(0.95);
-  transition: transform 0.3s ease;
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Glass effect */
+  background: var(--bg);
+  border: 2px solid var(--border);
+}
+
+/* Hide scrollbar but keep functionality */
+.modal::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.modal {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 136, 0.4),
+    transparent
+  );
+  z-index: 1;
 }
 
 .modal-overlay.active .modal {
@@ -945,10 +1423,8 @@ footer span {
 .modal-header {
   padding: 2rem;
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
+  position: relative;
   background: var(--bg);
-  z-index: 10;
 }
 
 .modal-close {
@@ -957,8 +1433,8 @@ footer span {
   right: 1.5rem;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--border);
   background: transparent;
+  border: 1px solid var(--border);
   color: var(--text);
   cursor: pointer;
   display: flex;
@@ -982,6 +1458,7 @@ footer span {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  background: rgba(0, 255, 136, 0.05);
 }
 
 .modal-title {
@@ -1008,12 +1485,14 @@ footer span {
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  background: rgba(0, 255, 136, 0.05);
 }
 
 .modal-project-link:hover {
   background: var(--accent);
   color: var(--bg);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 .modal-project-link svg {
@@ -1080,9 +1559,15 @@ footer span {
 
 .modal-tech-tag {
   padding: 0.5rem 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
   font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.modal-tech-tag:hover {
+  border-color: rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.05);
 }
 
 .modal-stats {
@@ -1093,10 +1578,16 @@ footer span {
 
 .modal-stat {
   padding: 1rem 1.25rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
   text-align: center;
   flex: 0 0 auto;
+  
+  /* Glass effect */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid var(--glass-border);
 }
 
 .modal-stat-value {
@@ -1221,5 +1712,16 @@ footer span {
 
   .project-expand {
     margin-left: 0;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

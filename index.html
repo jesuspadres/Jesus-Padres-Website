@@ -19,6 +19,7 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="liquid-glass.css">
 </head>
 <body>
   <div id="app" class="loading">Loading resume data...</div>
@@ -26,8 +27,8 @@
   <!-- Modal Container -->
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModal()">×</button>
       <div class="modal-header">
-        <button class="modal-close" onclick="closeModal()">×</button>
         <div id="modal-header-content"></div>
       </div>
       <div class="modal-body" id="modal-body-content"></div>
@@ -36,5 +37,7 @@
 
   <!-- App Logic -->
   <script src="app.js"></script>
+  <!-- Liquid Glass Effects -->
+  <script src="liquid-glass.js"></script>
 </body>
 </html>
