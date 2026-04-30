@@ -122,11 +122,11 @@
       "details": {
         "description": "Strong foundation across multiple paradigms with production experience.",
         "breakdown": [
-          { "name": "JavaScript", "level": "Advanced", "years": 1 },
-          { "name": "TypeScript", "level": "Advanced", "years": 1 },
           { "name": "Python", "level": "Advanced", "years": 4 },
           { "name": "Java", "level": "Advanced", "years": 3 },
           { "name": "SQL", "level": "Advanced", "years": 2 },
+          { "name": "JavaScript", "level": "Advanced", "years": 1 },
+          { "name": "TypeScript", "level": "Advanced", "years": 1 },
           { "name": "Swift", "level": "Capable", "years": 1 }
         ]
       }
@@ -205,10 +205,10 @@
         "description": "Comprehensive testing strategies — assert on outcomes, not implementation details.",
         "breakdown": [
           { "name": "Selenium / JUnit", "level": "Advanced", "years": 2 },
-          { "name": "Jest", "level": "Advanced", "years": 1 },
           { "name": "End-to-End Testing", "level": "Advanced", "years": 2 },
           { "name": "Agile / Scrum", "level": "Advanced", "years": 2 },
-          { "name": "Jira (Certified)", "level": "Certified", "years": 2 }
+          { "name": "Jira (Certified)", "level": "Certified", "years": 2 },
+          { "name": "Jest", "level": "Advanced", "years": 1 }
         ]
       }
     }
