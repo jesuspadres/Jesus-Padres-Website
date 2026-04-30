@@ -24,7 +24,9 @@
 
   "stats": [
     { "value": "3+", "label": "Years Experience" },
-    { "value": "95%", "label": "Test Efficiency Gain" }
+    { "value": "95%", "label": "Test Efficiency Gain" },
+    { "value": "2", "label": "Products Shipped" },
+    { "value": "EN/ES", "label": "Bilingual" }
   ],
 
   "experience": [
