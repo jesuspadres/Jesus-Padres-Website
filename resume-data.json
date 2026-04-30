@@ -122,11 +122,11 @@
       "details": {
         "description": "Strong foundation across multiple paradigms with production experience.",
         "breakdown": [
-          { "name": "JavaScript", "level": "Advanced", "years": 4 },
-          { "name": "TypeScript", "level": "Advanced", "years": 3 },
+          { "name": "JavaScript", "level": "Advanced", "years": 1 },
+          { "name": "TypeScript", "level": "Advanced", "years": 1 },
           { "name": "Python", "level": "Advanced", "years": 4 },
-          { "name": "Java", "level": "Advanced", "years": 4 },
-          { "name": "SQL", "level": "Advanced", "years": 3 },
+          { "name": "Java", "level": "Advanced", "years": 3 },
+          { "name": "SQL", "level": "Advanced", "years": 2 },
           { "name": "Swift", "level": "Capable", "years": 1 }
         ]
       }
@@ -139,11 +139,11 @@
       "details": {
         "description": "Modern, accessible, performant interfaces — from marketing sites to full SaaS apps.",
         "breakdown": [
-          { "name": "React", "level": "Advanced", "years": 3 },
-          { "name": "Next.js", "level": "Advanced", "years": 2 },
-          { "name": "Tailwind CSS", "level": "Advanced", "years": 2 },
-          { "name": "HTML5/CSS3", "level": "Advanced", "years": 4 },
-          { "name": "Responsive Design", "level": "Advanced", "years": 3 }
+          { "name": "React", "level": "Advanced", "years": 1 },
+          { "name": "Next.js", "level": "Advanced", "years": 1 },
+          { "name": "Tailwind CSS", "level": "Advanced", "years": 1 },
+          { "name": "HTML5/CSS3", "level": "Advanced", "years": 1 },
+          { "name": "Responsive Design", "level": "Advanced", "years": 1 }
         ]
       }
     },
@@ -155,11 +155,11 @@
       "details": {
         "description": "Production APIs, auth, and data layers — Postgres-first with Supabase or self-hosted.",
         "breakdown": [
-          { "name": "Node.js / Express", "level": "Advanced", "years": 3 },
-          { "name": "PostgreSQL / Supabase", "level": "Advanced", "years": 2 },
+          { "name": "Node.js / Express", "level": "Advanced", "years": 1 },
+          { "name": "PostgreSQL / Supabase", "level": "Advanced", "years": 1 },
           { "name": "FastAPI", "level": "Capable", "years": 1 },
-          { "name": "JWT / Auth flows", "level": "Advanced", "years": 3 },
-          { "name": "MongoDB", "level": "Capable", "years": 2 }
+          { "name": "JWT / Auth flows", "level": "Advanced", "years": 1 },
+          { "name": "MongoDB", "level": "Capable", "years": 1 }
         ]
       }
     },
@@ -172,8 +172,8 @@
         "description": "LLM-powered features in production — voice agents, RAG, prompt-engineered workflows.",
         "breakdown": [
           { "name": "Claude API", "level": "Advanced", "years": 1 },
-          { "name": "OpenAI", "level": "Advanced", "years": 2 },
-          { "name": "Prompt Engineering", "level": "Advanced", "years": 2 },
+          { "name": "OpenAI", "level": "Advanced", "years": 1 },
+          { "name": "Prompt Engineering", "level": "Advanced", "years": 1 },
           { "name": "RAG Pipelines", "level": "Capable", "years": 1 },
           { "name": "Retell AI / Twilio", "level": "Advanced", "years": 1 },
           { "name": "n8n Workflow Automation", "level": "Advanced", "years": 1 }
@@ -191,8 +191,8 @@
           { "name": "Git/GitHub", "level": "Advanced", "years": 4 },
           { "name": "Jenkins / CI-CD", "level": "Advanced", "years": 3 },
           { "name": "Docker", "level": "Advanced", "years": 2 },
-          { "name": "AWS", "level": "Capable", "years": 2 },
-          { "name": "Vercel / Netlify", "level": "Advanced", "years": 2 }
+          { "name": "AWS", "level": "Capable", "years": 1 },
+          { "name": "Vercel / Netlify", "level": "Advanced", "years": 1 }
         ]
       }
     },
@@ -204,11 +204,11 @@
       "details": {
         "description": "Comprehensive testing strategies — assert on outcomes, not implementation details.",
         "breakdown": [
-          { "name": "Selenium / JUnit", "level": "Advanced", "years": 3 },
-          { "name": "Jest", "level": "Advanced", "years": 2 },
-          { "name": "End-to-End Testing", "level": "Advanced", "years": 3 },
-          { "name": "Agile / Scrum", "level": "Advanced", "years": 3 },
-          { "name": "Jira (Certified)", "level": "Certified", "years": 3 }
+          { "name": "Selenium / JUnit", "level": "Advanced", "years": 2 },
+          { "name": "Jest", "level": "Advanced", "years": 1 },
+          { "name": "End-to-End Testing", "level": "Advanced", "years": 2 },
+          { "name": "Agile / Scrum", "level": "Advanced", "years": 2 },
+          { "name": "Jira (Certified)", "level": "Certified", "years": 2 }
         ]
       }
     }
