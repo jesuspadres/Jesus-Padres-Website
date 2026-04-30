@@ -4,16 +4,17 @@
     "shortName": "JESUS PADRES",
     "initials": "JP",
     "image": "headshot.jpg",
-    "title": "Software Engineer & Founder",
-    "tagline": "Building digital experiences that scale.",
-    "bio": "Software engineer with 3+ years of experience designing and shipping SaaS applications for enterprise clients. Currently building solutions at Solvr Labs.",
+    "title": "Full-Stack Software Engineer & Founder",
+    "tagline": "Building digital experiences that ship.",
+    "bio": "Full-Stack Software Engineer with 3+ years of enterprise SaaS experience at Qualtrics and a founder's lens on product. I bridge business problems and AI-powered solutions — from discovery and system design to scalable production apps with CI/CD, automated testing, and cross-functional delivery.",
     "location": "Tucson, Arizona",
     "languages": ["English", "Español"],
     "phone": "(520) 393-9903",
     "email": "jesuspadresjobs@gmail.com",
     "linkedin": "https://linkedin.com/in/jesus-padres",
     "github": "https://github.com/jesuspadres",
-    "website": "jesuspadres.com"
+    "website": "jesuspadres.com",
+    "resumePdf": "Jesus_Padres.pdf"
   },
 
   "stats": [
@@ -24,27 +25,32 @@
   "experience": [
     {
       "id": "solvr",
-      "title": "Founder",
+      "title": "Founder / Full-Stack Software Engineer",
       "company": "Solvr Labs",
       "date": "May 2025 — Present",
       "type": "current",
-      "summary": "Technical consulting practice delivering branding, digital strategy, and custom software solutions.",
+      "summary": "AI automation and custom software for service businesses. Sole operator across product, full-stack development, AI integration, QA, and delivery.",
       "highlights": [
-        "Support clients with branding, digital strategy, and technical solutions",
-        "Develop processes and workflows focused on improving customer experience and operational efficiency"
+        "Founded an AI automation and custom software company serving 7+ verticals (home services, property management, dental, legal, auto, salons, landscaping)",
+        "Shipped TaskLine (React, TypeScript, PostgreSQL, Tailwind) — a full-stack client management portal with AI-generated proposals, invoicing, job tracking, scheduling, SMS/email follow-ups, and a client portal",
+        "Built AI workflow automations including missed-call text-backs, automated proposal generation, invoice follow-ups, and appointment booking — using Claude API, OpenAI, and Twilio",
+        "Developed a Voice AI receptionist that answers calls, books appointments, and follows up with clients 24/7 in English and Spanish",
+        "Engineered a zero-touch lead gen pipeline that scrapes, scores, enriches, and deduplicates 1,000+ prospects into a tiered CRM"
       ],
       "details": {
-        "description": "Founded Solvr Labs to help businesses transform their digital presence and streamline operations through custom technology solutions.",
+        "description": "Founded Solvr Labs to help service businesses leverage AI and custom software to grow without growing headcount. Sole operator across product strategy, full-stack development, AI integration, QA, and client delivery.",
         "responsibilities": [
-          "Lead client discovery sessions to identify pain points and opportunities",
-          "Design and implement custom web applications and automation tools",
-          "Create brand identities and digital marketing strategies",
-          "Build scalable workflows that improve operational efficiency"
+          "Lead client discovery, scoping, and system design",
+          "Build full-stack web apps (React/Next.js + PostgreSQL/Supabase) with AI integrations",
+          "Design and deploy Voice AI agents and SMS/email automation flows",
+          "Operate a self-built lead gen pipeline that fills the top of funnel without manual prospecting",
+          "Own QA, deployment, monitoring, and post-launch support"
         ],
-        "technologies": ["React", "Node.js", "Python", "Figma", "AWS"],
+        "technologies": ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL", "Supabase", "Tailwind", "Claude API", "OpenAI", "Retell AI", "Twilio", "n8n", "Vercel"],
         "achievements": [
-          "Successfully launched consulting practice",
-          "Developed reusable frameworks for rapid client delivery"
+          "Shipped TaskLine to production with iOS/Android apps and live customers",
+          "Operating a fully automated outbound pipeline (1,000+ prospects scored and tiered)",
+          "Reusable agent + automation frameworks across 7+ service-business verticals"
         ]
       }
     },
@@ -52,30 +58,30 @@
       "id": "qualtrics",
       "title": "Software Engineer",
       "company": "Qualtrics",
-      "date": "July 2022 — April 2025",
+      "date": "July 2022 — March 2025",
       "type": "full-time",
-      "summary": "Full-stack development of SaaS applications for enterprise and university clients.",
+      "summary": "Full-stack development on enterprise survey, analytics, and feedback products serving Fortune 500 customers.",
       "highlights": [
-        "Designed, developed, and tested SaaS applications for enterprise and university clients, focusing on reliability and scalability",
-        "Wrote and maintained clean, modular code in Python, JavaScript, and SQL for full-stack delivery",
-        "Built automated test suites with Selenium and JUnit, improving test efficiency by 95%",
-        "Collaborated cross-functionally with PMs, QA, and DevOps teams for seamless CI/CD via Jenkins",
-        "Monitored and debugged production issues using centralized logs, maintaining system uptime"
+        "Designed and developed full-stack features in Java, Python, JavaScript, and SQL for products serving Fortune 500 companies",
+        "Built automated test infrastructure with Selenium and JUnit, improving test efficiency by 95% and reducing regression bugs by 40%",
+        "Delivered features cross-functionally with PMs, QA, and DevOps through CI/CD pipelines (Jenkins, Docker)",
+        "Led Agile/Scrum sprint ceremonies, conducted code reviews, and resolved production incidents while maintaining 99.9% uptime",
+        "Specialized in end-to-end testing driven by real user behavior — catching edge-case bugs by asserting on outcomes, not just UI interactions"
       ],
       "details": {
-        "description": "Worked on Qualtrics' experience management platform, building tools that help organizations collect and analyze feedback at scale.",
+        "description": "Worked on Qualtrics' Experience Management platform, building features for survey, analytics, and feedback products used by Fortune 500 customers.",
         "responsibilities": [
-          "Develop new features for survey creation and distribution platform",
-          "Maintain and optimize existing codebase for performance",
-          "Write comprehensive unit and integration tests",
+          "Develop new full-stack features across Java, Python, JavaScript, and SQL",
+          "Maintain and optimize existing codebase for performance and reliability",
+          "Write comprehensive unit, integration, and E2E tests",
           "Participate in on-call rotation for production support",
           "Conduct code reviews and mentor junior developers"
         ],
-        "technologies": ["Java", "Python", "JavaScript", "SQL", "React", "Jenkins", "Selenium", "JUnit", "AWS"],
+        "technologies": ["Java", "Python", "JavaScript", "SQL", "React", "Jenkins", "Docker", "Selenium", "JUnit", "AWS"],
         "achievements": [
-          "Improved test automation efficiency by 95%",
-          "Reduced production incidents through proactive monitoring",
-          "Contributed to platform serving millions of survey responses"
+          "Improved test automation efficiency by 95% and reduced regression bugs by 40%",
+          "Maintained 99.9% production uptime across owned services",
+          "Contributed to a platform serving millions of survey responses"
         ]
       }
     },
@@ -85,24 +91,23 @@
       "company": "University of Arizona",
       "date": "Aug 2021 — May 2022",
       "type": "part-time",
-      "summary": "Mentored students in core CS fundamentals and software engineering practices.",
+      "summary": "Mentored 50+ students in CS fundamentals, debugging, and software engineering practices.",
       "highlights": [
-        "Mentored students in data structures, algorithms, and software engineering fundamentals using Java, Python, and C",
+        "Mentored 50+ students in data structures, algorithms, and software debugging using Java, Python, and C",
         "Guided learners in debugging and testing strategies to strengthen independent problem-solving skills"
       ],
       "details": {
-        "description": "Provided one-on-one and group tutoring for computer science students, helping them master fundamental concepts and develop strong problem-solving skills.",
+        "description": "Provided one-on-one and group tutoring for computer science students, helping them master fundamentals and develop strong problem-solving skills.",
         "responsibilities": [
-          "Conduct tutoring sessions for all computer science courses",
+          "Conduct tutoring sessions across the CS curriculum",
           "Help students debug code and understand error messages",
           "Explain complex concepts using real-world analogies",
           "Create practice problems and study materials"
         ],
         "technologies": ["Java", "Python", "C", "Git"],
         "achievements": [
-          "Helped dozens of students improve their grades",
-          "Developed teaching materials still used by tutoring center",
-          "Received consistently positive feedback from students"
+          "Mentored 50+ students through core CS coursework",
+          "Developed teaching materials still used by the tutoring center"
         ]
       }
     }
@@ -113,15 +118,15 @@
       "id": "languages",
       "name": "Languages",
       "proficiency": 95,
-      "tags": ["Java", "Python", "JavaScript", "SQL", "C", "Swift"],
+      "tags": ["JavaScript", "TypeScript", "Python", "Java", "SQL", "HTML5", "CSS3", "Swift"],
       "details": {
-        "description": "Strong foundation in multiple programming paradigms with production experience.",
+        "description": "Strong foundation across multiple paradigms with production experience.",
         "breakdown": [
-          { "name": "Java", "level": "Advanced", "years": 4 },
+          { "name": "JavaScript", "level": "Advanced", "years": 4 },
+          { "name": "TypeScript", "level": "Advanced", "years": 3 },
           { "name": "Python", "level": "Advanced", "years": 4 },
-          { "name": "JavaScript", "level": "Capable", "years": 2 },
-          { "name": "SQL", "level": "Capable", "years": 2 },
-          { "name": "C", "level": "Capable", "years": 2 },
+          { "name": "Java", "level": "Advanced", "years": 4 },
+          { "name": "SQL", "level": "Advanced", "years": 3 },
           { "name": "Swift", "level": "Capable", "years": 1 }
         ]
       }
@@ -129,75 +134,81 @@
     {
       "id": "frontend",
       "name": "Frontend",
-      "proficiency": 88,
-      "tags": ["React", "HTML5", "CSS", "DOM fundamentals", "responsive design"],
+      "proficiency": 92,
+      "tags": ["React", "Next.js", "Tailwind CSS", "Redux", "REST APIs", "Responsive Design"],
       "details": {
-        "description": "Building modern, accessible, and performant user interfaces.",
+        "description": "Modern, accessible, performant interfaces — from marketing sites to full SaaS apps.",
         "breakdown": [
-          { "name": "React", "level": "Capable", "years": 1 },
-          { "name": "HTML5/CSS3", "level": "Competent", "years": 3 },
-          { "name": "Responsive Design", "level": "Capable", "years": 1 },
-          { "name": "DOM/Browser APIs", "level": "Capable", "years": 1 }
+          { "name": "React", "level": "Advanced", "years": 3 },
+          { "name": "Next.js", "level": "Advanced", "years": 2 },
+          { "name": "Tailwind CSS", "level": "Advanced", "years": 2 },
+          { "name": "HTML5/CSS3", "level": "Advanced", "years": 4 },
+          { "name": "Responsive Design", "level": "Advanced", "years": 3 }
         ]
       }
     },
     {
-      "id": "tools",
-      "name": "Tools & Infra",
+      "id": "backend",
+      "name": "Backend",
       "proficiency": 90,
-      "tags": ["Git/GitHub", "Jenkins", "Linux", "CI/CD pipelines", "VS Code"],
+      "tags": ["Node.js", "FastAPI", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "JWT Auth", "REST"],
       "details": {
-        "description": "DevOps and infrastructure tooling for reliable software delivery.",
+        "description": "Production APIs, auth, and data layers — Postgres-first with Supabase or self-hosted.",
         "breakdown": [
-          { "name": "Git/GitHub", "level": "Advanced", "years": 3 },
-          { "name": "Jenkins", "level": "Advanced", "years": 2 },
-          { "name": "Linux", "level": "Advanced", "years": 3 },
-          { "name": "CI/CD", "level": "Advanced", "years": 2 }
+          { "name": "Node.js / Express", "level": "Advanced", "years": 3 },
+          { "name": "PostgreSQL / Supabase", "level": "Advanced", "years": 2 },
+          { "name": "FastAPI", "level": "Capable", "years": 1 },
+          { "name": "JWT / Auth flows", "level": "Advanced", "years": 3 },
+          { "name": "MongoDB", "level": "Capable", "years": 2 }
+        ]
+      }
+    },
+    {
+      "id": "ai",
+      "name": "AI & Automation",
+      "proficiency": 92,
+      "tags": ["Claude API", "OpenAI", "Prompt Engineering", "RAG", "Retell AI", "Twilio", "n8n"],
+      "details": {
+        "description": "LLM-powered features in production — voice agents, RAG, prompt-engineered workflows.",
+        "breakdown": [
+          { "name": "Claude API", "level": "Advanced", "years": 1 },
+          { "name": "OpenAI", "level": "Advanced", "years": 2 },
+          { "name": "Prompt Engineering", "level": "Advanced", "years": 2 },
+          { "name": "RAG Pipelines", "level": "Capable", "years": 1 },
+          { "name": "Retell AI / Twilio", "level": "Advanced", "years": 1 },
+          { "name": "n8n Workflow Automation", "level": "Advanced", "years": 1 }
+        ]
+      }
+    },
+    {
+      "id": "devops",
+      "name": "DevOps & Tools",
+      "proficiency": 90,
+      "tags": ["Git/GitHub", "Jenkins", "Docker", "CI/CD", "AWS", "Vercel", "Netlify"],
+      "details": {
+        "description": "Reliable delivery: pipelines, containers, and cloud platforms across the dev → prod cycle.",
+        "breakdown": [
+          { "name": "Git/GitHub", "level": "Advanced", "years": 4 },
+          { "name": "Jenkins / CI-CD", "level": "Advanced", "years": 3 },
+          { "name": "Docker", "level": "Advanced", "years": 2 },
+          { "name": "AWS", "level": "Capable", "years": 2 },
+          { "name": "Vercel / Netlify", "level": "Advanced", "years": 2 }
         ]
       }
     },
     {
       "id": "testing",
-      "name": "Testing & Debug",
+      "name": "Testing & QA",
       "proficiency": 92,
-      "tags": ["Unit testing", "Selenium", "e2e testing", "distributed systems debugging"],
+      "tags": ["Selenium", "JUnit", "Jest", "E2E testing", "Agile/Scrum", "Jira"],
       "details": {
-        "description": "Comprehensive testing strategies and debugging complex systems.",
+        "description": "Comprehensive testing strategies — assert on outcomes, not implementation details.",
         "breakdown": [
-          { "name": "Unit Testing", "level": "Advanced", "years": 3 },
-          { "name": "Selenium", "level": "Advanced", "years": 3 },
-          { "name": "E2E Testing", "level": "Advanced", "years": 3 },
-          { "name": "Debugging", "level": "Advanced", "years": 4 }
-        ]
-      }
-    },
-    {
-      "id": "workflow",
-      "name": "Workflow",
-      "proficiency": 85,
-      "tags": ["Agile/Scrum", "Jira Certified", "code reviews", "documentation"],
-      "details": {
-        "description": "Collaborative development practices and project management.",
-        "breakdown": [
-          { "name": "Agile/Scrum", "level": "Advanced", "years": 3 },
-          { "name": "Jira", "level": "Certified", "years": 3 },
-          { "name": "Code Reviews", "level": "Advanced", "years": 3 },
-          { "name": "Documentation", "level": "Advanced", "years": 4 }
-        ]
-      }
-    },
-    {
-      "id": "communication",
-      "name": "Communication",
-      "proficiency": 95,
-      "tags": ["Bilingual EN/ES", "mentoring", "cross-functional collaboration"],
-      "details": {
-        "description": "Strong interpersonal skills with experience in mentoring and team collaboration.",
-        "breakdown": [
-          { "name": "English", "level": "Native", "years": null },
-          { "name": "Spanish", "level": "Native", "years": null },
-          { "name": "Mentoring", "level": "Advanced", "years": 3 },
-          { "name": "Collaboration", "level": "Expert", "years": 4 }
+          { "name": "Selenium / JUnit", "level": "Advanced", "years": 3 },
+          { "name": "Jest", "level": "Advanced", "years": 2 },
+          { "name": "End-to-End Testing", "level": "Advanced", "years": 3 },
+          { "name": "Agile / Scrum", "level": "Advanced", "years": 3 },
+          { "name": "Jira (Certified)", "level": "Certified", "years": 3 }
         ]
       }
     }
@@ -205,91 +216,91 @@
 
   "projects": [
     {
-      "id": "test-automation",
-      "title": "Test Automation Framework",
-      "tag": "Automation",
-      "summary": "Built comprehensive automated test suites achieving 95% efficiency improvement in QA processes.",
-      "technologies": ["Selenium", "JUnit", "Jenkins"],
+      "id": "taskline",
+      "title": "TaskLine",
+      "tag": "Flagship · Full-Stack + AI",
+      "summary": "Free freelancer OS with an AI receptionist that pays for itself. Projects, tasks, clients, invoicing, scheduling, payments — plus optional Voice AI that answers calls and books jobs 24/7.",
+      "technologies": ["Next.js 14", "TypeScript", "Supabase", "PostgreSQL", "Tailwind", "Claude API", "OpenAI Whisper + Realtime", "Retell AI", "Twilio", "Stripe Connect", "Resend", "Upstash Redis"],
       "details": {
-        "description": "Designed and implemented a comprehensive test automation framework that dramatically improved QA efficiency and release confidence.",
+        "description": "TaskLine is a complete back-office for tradespeople and service freelancers — projects, tasks, clients, invoicing, calendar, scheduling, payments. The optional AI suite (Radar) answers your phone, analyzes incoming requests, drafts quotes, and helps you talk to clients. Free platform; commission-based AI.",
+        "features": [
+          "AI-answered phone line (Retell AI + Twilio) that books appointments 24/7",
+          "Voice-first in-app assistant — dictate quotes and invoices hands-free",
+          "Bilingual end-to-end (English + Spanish LATAM) across UI, email, SMS, and AI",
+          "Email + SMS as first-class channels with A2P 10DLC compliance",
+          "Stripe Connect direct-deposit payments with no middleman",
+          "iOS and Android apps (live in App Store and Google Play)"
+        ],
+        "impact": "Eliminates lost leads from missed calls and email chaos for solo trades and small service teams. Free platform with commission only on AI-sourced jobs.",
+        "role": "Sole developer — product, architecture, full-stack delivery, mobile apps, AI integration, payments, deployment."
+      },
+      "link": "https://taskline.solvrlabs.com"
+    },
+    {
+      "id": "solvr-labs",
+      "title": "Solvr Labs",
+      "tag": "Company · Consulting",
+      "summary": "AI automation and custom software for service businesses across 7+ verticals. Voice AI receptionists, AI workflow automation, custom SaaS, and a zero-touch lead gen pipeline.",
+      "technologies": ["Strategy", "Full-Stack Dev", "Claude API", "OpenAI", "Retell AI", "Twilio", "n8n"],
+      "details": {
+        "description": "Solvr Labs builds AI systems for businesses that don't have a tech team — home services, property management, dental, legal, auto, salons, landscaping. Pragmatic ROI framing, founder-led, no fluff.",
+        "features": [
+          "AI workflow automation (missed-call text-backs, proposals, invoice follow-ups, booking)",
+          "Voice AI receptionist (24/7 answering, scheduling, lead capture)",
+          "Custom AI software with embedded LLM features",
+          "Self-built outbound pipeline scoring 1,000+ prospects into tiered CRM"
+        ],
+        "impact": "Helps service businesses recover lost revenue from missed leads while operating leaner.",
+        "role": "Founder and sole operator across product, engineering, AI, QA, and delivery."
+      },
+      "link": "https://solvrlabs.com"
+    },
+    {
+      "id": "test-automation",
+      "title": "Enterprise Test Automation Framework",
+      "tag": "Qualtrics · Test Infrastructure",
+      "summary": "Selenium + JUnit suite that improved test efficiency by 95% and reduced regression bugs by 40% across enterprise survey, analytics, and feedback products.",
+      "technologies": ["Selenium", "JUnit", "Jenkins", "Docker", "Java"],
+      "details": {
+        "description": "Designed and implemented a comprehensive end-to-end test automation framework for Qualtrics' Experience Management platform. Specialized in tests driven by real user behavior — asserting on outcomes, not just UI interactions.",
         "features": [
           "Page Object Model architecture for maintainability",
-          "Data-driven testing with external configuration",
+          "Data-driven testing with externalized configuration",
           "Parallel test execution for faster feedback",
-          "Integration with CI/CD pipeline"
+          "Integration with Jenkins CI/CD and Docker"
         ],
-        "impact": "Reduced manual testing time by 95%, enabling faster release cycles and higher confidence in deployments.",
+        "impact": "Reduced manual testing time by 95% and regression bugs by 40%. Enabled faster release cycles and higher confidence in deployments.",
         "role": "Lead developer responsible for architecture, implementation, and team training."
       },
       "link": ""
     },
     {
-      "id": "taskline",
-      "title": "TaskLine",
-      "tag": "Full-Stack",
-      "summary": "Client portal for freelancers with task requests, instant quoting, and one-click approvals.",
-      "technologies": ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS"],
-      "details": {
-        "description": "A professional client portal that centralizes client communication, task requests, pricing approvals, and project progress for freelancers.",
-        "features": [
-          "Task request to approval workflow with instant quoting",
-          "Magic link authentication for passwordless client login",
-          "Project timeline with upcoming and completed tasks",
-          "In-app messaging and file sharing per project",
-          "Custom branding options for Pro tier"
-        ],
-        "impact": "Streamlines freelancer-client communication, eliminating lost requests in email and reducing approval friction.",
-        "role": "Sole developer — designed architecture, built full-stack application, and deployed to production."
-      },
-      "link": "https://taskline.solvrlabs.com"
-    },
-    {
       "id": "mealmaster",
       "title": "MealMaster",
-      "tag": "Full-Stack",
-      "summary": "Meal planning and recipe discovery app with weekly calendar, saved recipes, and smart search.",
-      "technologies": ["React", "TypeScript", "FastAPI", "Python", "SQLAlchemy"],
+      "tag": "Side Project · Full-Stack",
+      "summary": "Meal planning and recipe discovery app with weekly calendar, saved recipes, and smart search powered by Spoonacular.",
+      "technologies": ["React", "TypeScript", "FastAPI", "Python", "SQLAlchemy", "JWT"],
       "details": {
-        "description": "A modern meal planning application featuring recipe search via Spoonacular API, personal recipe collections, and weekly meal planning with a brutalist design aesthetic.",
+        "description": "A modern meal planning application built as a 12-week full-stack project — Spoonacular-powered recipe search, personal collections, and weekly meal planning with a brutalist UI.",
         "features": [
           "Smart recipe search with detailed nutrition and cooking info",
-          "JWT-based authentication with secure password hashing",
+          "JWT-based auth with secure password hashing",
           "Personal recipe collection with favorites",
-          "Weekly meal planner with drag-and-drop scheduling",
-          "Brutalist UI with bold borders and monospace typography"
+          "Weekly meal planner with drag-and-drop scheduling"
         ],
-        "impact": "Demonstrates full-stack proficiency with React frontend, FastAPI backend, and third-party API integration.",
-        "role": "Sole developer — built 12-week project covering frontend, backend, database design, and API integration."
+        "impact": "Demonstrates full-stack delivery — React frontend, FastAPI backend, third-party API integration, and clean auth flow.",
+        "role": "Sole developer — frontend, backend, database, and API integration."
       },
       "link": "https://github.com/jesuspadres/mealmaster"
-    },
-    {
-      "id": "solvr-labs",
-      "title": "Solvr Labs",
-      "tag": "Consulting",
-      "summary": "Founded technical consulting practice delivering branding, digital strategy, and custom software solutions.",
-      "technologies": ["Strategy", "Development", "UX"],
-      "details": {
-        "description": "Founded a consulting practice focused on helping businesses leverage technology to improve their operations and customer experience.",
-        "features": [
-          "Custom web application development",
-          "Brand identity and digital strategy",
-          "Process automation and optimization",
-          "Technical consulting and architecture"
-        ],
-        "impact": "Helping businesses transform their digital presence and streamline operations.",
-        "role": "Founder and lead consultant."
-      },
-      "link": "https://solvrlabs.com"
     }
   ],
 
   "education": {
     "school": "University of Arizona",
     "location": "Tucson, Arizona",
-    "degree": "Bachelor of Science in Computer Science",
+    "degree": "B.S. Computer Science, Business Minor",
     "gpa": "3.7",
-    "certifications": ["Project Management Certification"],
+    "certifications": ["Project Management Certificate", "Jira Certified"],
     "coursework": [
       "Data Structures",
       "Software Development",
