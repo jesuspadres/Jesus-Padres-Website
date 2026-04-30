@@ -16,6 +16,12 @@
     "website": "jesuspadres.com"
   },
 
+  "github": {
+    "username": "jesuspadres",
+    "hiddenRepos": ["rep1", "Jesus-Padres-Website"],
+    "displayLimit": 12
+  },
+
   "stats": [
     { "value": "3+", "label": "Years Experience" },
     { "value": "95%", "label": "Test Efficiency Gain" }
