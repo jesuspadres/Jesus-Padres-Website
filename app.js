@@ -97,10 +97,6 @@ function renderHero() {
               ${imageContent}
             </div>
           </div>
-          <div class="floating-badge badge-1" onclick="openEducationModal()">
-            <span>${resumeData.education.gpa}</span>
-            GPA
-          </div>
           <div class="floating-badge badge-2">
             <span>${personal.languages.map(l => l.substring(0,2).toUpperCase()).join('/')}</span>
             BILINGUAL
@@ -236,10 +232,6 @@ function renderEducation() {
             <p class="edu-expand">CLICK FOR DETAILS →</p>
           </div>
           <div class="edu-details">
-            <div class="edu-stat">
-              <div class="edu-stat-value">${edu.gpa}</div>
-              <div class="edu-stat-label">GPA</div>
-            </div>
             <div class="edu-stat">
               <div class="edu-stat-value">B.S.</div>
               <div class="edu-stat-label">Degree</div>
@@ -490,10 +482,6 @@ function openEducationModal() {
     `
       <div class="modal-section">
         <div class="modal-stats">
-          <div class="modal-stat">
-            <div class="modal-stat-value">${edu.gpa}</div>
-            <div class="modal-stat-label">GPA</div>
-          </div>
           <div class="modal-stat">
             <div class="modal-stat-value">B.S.</div>
             <div class="modal-stat-label">Degree</div>

@@ -299,7 +299,6 @@
     "school": "University of Arizona",
     "location": "Tucson, Arizona",
     "degree": "B.S. Computer Science, Business Minor",
-    "gpa": "3.7",
     "certifications": ["Project Management Certificate", "Jira Certified"],
     "coursework": [
       "Data Structures",
